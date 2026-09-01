@@ -43,35 +43,6 @@
       margin: auto;
       padding: 30px 20px;
 }
-
-.logo {
-  width: 140px;
-  height: 140px;
-  object-fit: contain;
-
-  display: block;
-  margin: 0 auto;
-
-  position: relative;
-  top: 0;
-
-  transform-origin: center center;
-
-  animation: logoZoomIn 2s ease-out forwards;
-}
-
-@keyframes logoZoomIn {
-  from {
-    transform: scale(1);
-  }
-
-  to {
-    transform: scale(1.15);
-  }
-#home {
-  text-align: center;
-  padding: 40px 20px 30px;
-}
     /* Home */
     h1 {
       font-size: 38px;
@@ -228,12 +199,30 @@
   border-radius: 100px;
 }
 .logo {
-  width: 180px;
-  max-width: 80%;
-  height: auto;
-  display: block;
-  margin: 30px auto;
-  border-radius: 50%;
+    width: 140px;
+    height: 140px;
+    object-fit: contain;
+
+    display: block;
+    margin: 0 auto 25px;
+
+    animation: logoZoomIn 2s ease-out forwards;
+}
+
+@keyframes logoZoomIn {
+    from {
+        transform: scale(1);
+    }
+
+    to {
+        transform: scale(1.15);
+    }
+}
+
+#home {
+    text-align: center;
+    padding: 40px 20px 30px;
+}
 
 #gallery {
   padding: 60px 20px;
@@ -350,7 +339,8 @@
     <a href="#news">News</a>
     <a href="#about">About</a>
     <a href="#contact">Contact</a>
-  </nav><img src="IMG-20260524-WA0000.jpg" alt="Eyes On Society Logo" class="logo">
+ 
+ <nav>
 
 
   <div class="container">
@@ -359,6 +349,7 @@
 
     <!-- Home Section -->
     <section id="home">
+<img src="IMG-20260524-WA0000.jpg" alt="Eyes On Society Logo" class="logo">
 
       <h1>Eyes On Society</h1>
 
