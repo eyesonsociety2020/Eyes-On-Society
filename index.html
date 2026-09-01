@@ -44,22 +44,26 @@
       padding: 30px 20px;
     }
 
-    /* EOS Logo */
-    .logo-text {
-      width: 180px;
-      height: 180px;
-      margin: 25px auto;
-      border: 5px solid #222;
-      border-radius: 50%;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      background: white;
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    .logo {
+  width: 140px;
+  height: 140px;
+  object-fit: contain;
+  animation: logoAnimation 3s ease-in-out infinite;
+}
 
-      animation: logoAnimation 1.5s ease;
-    }
+@keyframes logoAnimation {
+  0% {
+    transform: scale(1) rotate(0deg);
+  }
+
+  50% {
+    transform: scale(1.12) rotate(5deg);
+  }
+
+  100% {
+    transform: scale(1) rotate(0deg);
+  }
+}
 
     .logo-name {
       font-size: 48px;
