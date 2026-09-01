@@ -48,20 +48,16 @@
   width: 140px;
   height: 140px;
   object-fit: contain;
-  animation: logoAnimation 3s ease-in-out infinite;
+  animation: logoZoomIn 3s ease-out forward;
 }
 
 @keyframes logoAnimation {
-  0% {
-    transform: scale(1) rotate(0deg);
+  from {
+    transform: scale(1);
   }
 
-  50% {
-    transform: scale(1.12) rotate(5deg);
-  }
-
-  100% {
-    transform: scale(1) rotate(0deg);
+  to {
+    transform: scale(1.5);
   }
 }
 
