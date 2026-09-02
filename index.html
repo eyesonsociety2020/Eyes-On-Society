@@ -366,9 +366,27 @@
 .feedback-button:hover {
   transform: scale(1.05);
 }
+#backToTop {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  display: none;
+  border: none;
+  padding: 12px 17px;
+  font-size: 24px;
+  cursor: pointer;
+  border-radius: 50%;
+  background: #0b3d2e;
+  color: white;
+  z-index: 999;
+}
+
+#backToTop:hover {
+  transform: scale(1.1);
+}
 </style>
 </head>
-
+<button id="backToTop" title="Back to Top">↑</button>
 <body>
 
   <!-- Navigation -->
@@ -719,6 +737,21 @@ animatedElements.forEach((element) => {
   observer.observe(element);
 });
   </script>
+const backToTop = document.getElementById("backToTop");
 
+window.addEventListener("scroll", function () {
+  if (window.scrollY > 300) {
+    backToTop.style.display = "block";
+  } else {
+    backToTop.style.display = "none";
+  }
+});
+
+backToTop.addEventListener("click", function () {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth"
+  });
+});
 </body>
   </html>
