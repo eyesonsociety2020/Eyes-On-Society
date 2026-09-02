@@ -328,6 +328,18 @@
   .team-container {
     grid-template-columns: 1fr;
   }
+/* Fade Up Animation */
+
+.animate {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.animate.show {
+  opacity: 1;
+  transform: translateY(0);
+}
 </style>
 </head>
 
@@ -350,7 +362,7 @@
 
 
     <!-- Home Section -->
-    <section id="home">
+    <section id="home"class="animate">
 <img src="IMG-20260524-WA0000.jpg" alt="Eyes On Society Logo" class="logo">
 
       <h1>Eyes On Society</h1>
@@ -365,7 +377,7 @@
 
     </section>
 <!-- News Section -->
-<section id="news">
+<section id="news"class="animate">
 
   <h2>Latest News & Posts</h2>
 
@@ -387,7 +399,7 @@
 </section>
 
     <!-- About Section -->
-    <section id="about">
+    <section id="about"class="animate">
 
       <h2>About Us</h2>
 
@@ -395,7 +407,7 @@
         Eyes On Society is a platform focused on
         society, awareness and positive change.
       </p>
-<section id="gallery">
+<section id="gallery"class="animate">
   <h2>Our Gallery</h2>
   <p class="gallery-text">Eyes On Society-এর বিভিন্ন কার্যক্রমের ছবি</p>
 
@@ -466,7 +478,7 @@
 </section>
 
   </div>
-<section id="team">
+<section id="team"class="animate">
   <h2>Our Team</h2>
 
   <div class="team-container">
@@ -591,7 +603,7 @@
 
 
     <!-- Contact Section -->
-    <section id="contact">
+    <section id="contact"class="animate">
 
       <h2>Contact</h2>
 
@@ -640,6 +652,24 @@
     function showMessage() {
       alert("Welcome to Eyes On Society! 🎉");
     }
+const animatedElements = document.querySelectorAll(".animate");
+
+const observer = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("show");
+      }
+    });
+  },
+  {
+    threshold: 0.15
+  }
+);
+
+animatedElements.forEach((element) => {
+  observer.observe(element);
+});
   </script>
 
 </body>
