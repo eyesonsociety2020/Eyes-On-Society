@@ -340,6 +340,59 @@
   opacity: 1;
   transform: translateY(0);
 }
+/* Feedback Section */
+
+#feedback {
+  padding: 60px 20px;
+  text-align: center;
+  background: #f5f5f5;
+}
+
+#feedback h2 {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+.feedback-text {
+  font-size: 18px;
+  margin-bottom: 30px;
+}
+
+.feedback-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.feedback-card {
+  background: white;
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.12);
+  transition: 0.3s;
+}
+
+.feedback-card:hover {
+  transform: translateY(-8px);
+}
+
+.feedback-message {
+  font-size: 17px;
+  line-height: 1.7;
+  margin-bottom: 20px;
+}
+
+.feedback-card h3 {
+  margin-bottom: 5px;
+  color: #0b3d2e;
+}
+
+.feedback-card span {
+  font-size: 14px;
+  color: #666;
+}
 </style>
 </head>
 
@@ -353,6 +406,7 @@
     <a href="#news">News</a>
     <a href="#about">About</a>
     <a href="#contact">Contact</a>
+    <a href="#feedback">Feedback</a>
  
  <nav>
 
@@ -598,6 +652,51 @@
     <p>সদস্য</p>
 
   </div>
+</section>
+<section id="feedback" class="animate">
+
+  <h2>Feedback</h2>
+
+  <p class="feedback-text">
+    আপনার মতামত আমাদের জন্য গুরুত্বপূর্ণ।
+  </p>
+
+  <div class="feedback-container">
+
+    <div class="feedback-card">
+      <p class="feedback-message">
+        "Eyes On Society সমাজের জন্য খুব ভালো কাজ করছে।
+        তাদের কার্যক্রম সত্যিই প্রশংসনীয়।"
+      </p>
+
+      <h3>আপনার নাম</h3>
+      <span>Website Visitor</span>
+    </div>
+
+
+    <div class="feedback-card">
+      <p class="feedback-message">
+        "এই সংগঠনের মাধ্যমে মানুষের পাশে দাঁড়ানোর
+        উদ্যোগটি সত্যিই অনেক ভালো।"
+      </p>
+
+      <h3>আপনার নাম</h3>
+      <span>Supporter</span>
+    </div>
+
+
+    <div class="feedback-card">
+      <p class="feedback-message">
+        "Eyes On Society-এর কাজ সমাজে
+        ইতিবাচক পরিবর্তন আনতে সাহায্য করবে।"
+      </p>
+
+      <h3>আপনার নাম</h3>
+      <span>Community Member</span>
+    </div>
+
+  </div>
+
 </section>
     </section>
 
