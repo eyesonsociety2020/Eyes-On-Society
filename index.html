@@ -273,33 +273,6 @@
   .gallery-container {
     grid-template-columns: 1fr;
   }
-.image-modal {
-  display: none;
-  position: fixed;
-  z-index: 1000;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.9);
-  text-align: center;
-}
-
-#modalImage {
-  max-width: 90%;
-  max-height: 85%;
-  margin-top: 5%;
-  object-fit: contain;
-}
-
-.close-image {
-  position: absolute;
-  top: 20px;
-  right: 30px;
-  color: white;
-  font-size: 40px;
-  cursor: pointer;
-}
 /* Team Section */
 
 #team {
@@ -393,9 +366,48 @@
 .feedback-button:hover {
   transform: scale(1.05);
 }
+.gallery-item img {
+  cursor: pointer;
+}
 
+.image-modal {
+  display: none;
+  position: fixed;
+  z-index: 99999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.9);
+  justify-content: center;
+  align-items: center;
+}
+
+.image-modal.show {
+  display: flex;
+}
+
+#modalImage {
+  max-width: 90%;
+  max-height: 85vh;
+  object-fit: contain;
+}
+
+.close-image {
+  position: absolute;
+  top: 15px;
+  right: 25px;
+  color: white;
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
+}
 </style>
 </head>
+<div id="imageModal" class="image-modal">
+  <span class="close-image">&times;</span>
+  <img id="modalImage" alt="Full Size Image">
+</div>
 <body>
 
   <!-- Navigation -->
@@ -527,13 +539,7 @@
       <img src="photo10.jpg" alt="Gallery Photo 10">
       <h3>photo</h3>
     </div>
-<div id="imageModal" class="image-modal">
 
-  <span class="close-image">&times;</span>
-
-  <img id="modalImage" src="" alt="Full Size Image">
-
-</div>
   
 </section>
 
@@ -742,32 +748,21 @@ const imageModal = document.getElementById("imageModal");
 const modalImage = document.getElementById("modalImage");
 const closeImage = document.querySelector(".close-image");
 
-galleryImages.forEach(function (image) {
-
-  image.addEventListener("click", function () {
-
-    imageModal.style.display = "block";
-
+galleryImages.forEach(function(image) {
+  image.addEventListener("click", function() {
     modalImage.src = image.src;
-
+    imageModal.classList.add("show");
   });
-
 });
 
-closeImage.addEventListener("click", function () {
-
-  imageModal.style.display = "none";
-
+closeImage.addEventListener("click", function() {
+  imageModal.classList.remove("show");
 });
 
-imageModal.addEventListener("click", function (event) {
-
+imageModal.addEventListener("click", function(event) {
   if (event.target === imageModal) {
-
-    imageModal.style.display = "none";
-
+    imageModal.classList.remove("show");
   }
-
 });
 </script>
 </body>
