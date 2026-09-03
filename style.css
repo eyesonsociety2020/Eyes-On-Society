@@ -93,8 +93,8 @@ nav a:hover {
 
   display: block;
   margin: 0 auto 25px;
-  radius: 50%;
-  mix-blend-mood: multiply 
+  border-radius: 50%;
+  mix-blend-mode: multiply;
 
   animation: logoZoom 2s ease-out forwards;
 }
