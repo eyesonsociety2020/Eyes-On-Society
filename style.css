@@ -73,6 +73,17 @@ nav a:hover {
    LOGO
 ========================= */
 
+.logo-area {
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  padding: 35px 20px 25px;
+}
+
+
 .logo {
   width: 140px;
 
@@ -82,8 +93,9 @@ nav a:hover {
 
   display: block;
   margin: 0 auto 25px;
-  border-radius: 50%;
-  mix-blend-mood: multiply;
+  radius: 50%;
+  mix-blend-mood: multiply 
+
   animation: logoZoom 2s ease-out forwards;
 }
 
@@ -212,7 +224,6 @@ button:hover {
   line-height: 1.5;
 }
 
-
 /* =========================
    GALLERY
 ========================= */
@@ -269,6 +280,7 @@ button:hover {
 
   color: #333;
 }
+
 
 
 /* =========================
@@ -389,6 +401,7 @@ button:hover {
 
   font-size: 14px;
 }
+
 .contact-button {
   display: inline-block;
   padding: 12px 22px;
@@ -399,7 +412,6 @@ button:hover {
   font-size: 15px;
   font-weight: bold;
 }
-
 
 /* =========================
    FOOTER
