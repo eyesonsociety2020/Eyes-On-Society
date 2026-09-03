@@ -388,40 +388,40 @@ nav a {
 .feedback-button:hover {
   transform: scale(1.05);
 }
-/* ===== Compact Our Team Section ===== */
+/* ===== FORCE COMPACT TEAM SECTION ===== */
 
 #team {
-  padding: 25px 15px;
+  padding: 20px 10px !important;
   text-align: center;
 }
 
 #team h2 {
-  font-size: 24px;
-  margin: 0 0 15px 0;
+  font-size: 24px !important;
+  margin-bottom: 12px !important;
 }
 
-.team-member {
-  margin: 0;
-  padding: 5px 10px;
-  line-height: 1.3;
-}
-
-.team-member h3 {
-  font-size: 15px;
-  margin: 0;
-}
-
-.team-member p {
-  font-size: 12px;
-  margin: 2px 0 6px 0;
-}
-#team .team-member {
-  min-height: auto !important;
-}
-
-#team h3,
-#team p {
+/* Team section-এর সব নাম */
+#team h3 {
+  font-size: 15px !important;
+  margin: 4px 0 0 !important;
   padding: 0 !important;
+  line-height: 1.2 !important;
+}
+
+/* Team section-এর সব পদবি */
+#team p {
+  font-size: 12px !important;
+  margin: 0 0 6px !important;
+  padding: 0 !important;
+  line-height: 1.2 !important;
+}
+
+/* Team-এর ভেতরের সব div-এর extra gap কমানো */
+#team div {
+  margin-top: 0 !important;
+  margin-bottom: 4px !important;
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
 }
 </style>
 </head>
