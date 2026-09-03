@@ -22,38 +22,6 @@ function contactMessage() {
     "Thank you for contacting Eyes On Society!"
   );
 
-}
-
-
-
-/* =========================
-   VISITOR COUNTER
-========================= */
-
-let visitors = localStorage.getItem("eyesVisitors");
-
-
-if (visitors === null) {
-
-  visitors = 1;
-
-} else {
-
-  visitors = Number(visitors) + 1;
-
-}
-
-
-localStorage.setItem(
-  "eyesVisitors",
-  visitors
-);
-
-
-document.getElementById(
-  "visitorCount"
-).innerText = visitors;
-
 
 
 /* =========================
