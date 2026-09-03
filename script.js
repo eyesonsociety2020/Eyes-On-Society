@@ -22,6 +22,7 @@ function contactMessage() {
     "Thank you for contacting Eyes On Society!"
   );
 
+}
 
 
 /* =========================
