@@ -213,34 +213,6 @@ button:hover {
 }
 
 
-
-/* =========================
-   VISITOR COUNTER
-========================= */
-
-.visitor-box {
-  margin: 20px auto 0;
-
-  max-width: 250px;
-
-  padding: 15px;
-
-  border-radius: 12px;
-
-  background: #f7f7f7;
-}
-
-
-#visitorCount {
-  font-size: 28px;
-
-  font-weight: bold;
-
-  margin: 5px;
-}
-
-
-
 /* =========================
    GALLERY
 ========================= */
@@ -437,7 +409,16 @@ button:hover {
 
   font-size: 14px;
 }
-
+.contact-button {
+  display: inline-block;
+  padding: 12px 22px;
+  border-radius: 25px;
+  background: #222;
+  color: white;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: bold;
+}
 
 
 /* =========================
