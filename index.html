@@ -366,11 +366,7 @@
 .feedback-button:hover {
   transform: scale(1.05);
 }
-.gallery-item img {
-  cursor: pointer;
-}
-
-.image-modal {
+#imageModal {
   display: none;
   position: fixed;
   z-index: 99999;
@@ -383,24 +379,20 @@
   align-items: center;
 }
 
-.image-modal.show {
-  display: flex;
-}
-
 #modalImage {
   max-width: 90%;
   max-height: 85vh;
   object-fit: contain;
 }
 
-.close-image {
+#closeImage {
   position: absolute;
-  top: 15px;
+  top: 20px;
   right: 25px;
   color: white;
   font-size: 40px;
-  font-weight: bold;
   cursor: pointer;
+  z-index: 100000;
 }
 </style>
 </head>
@@ -730,7 +722,10 @@ href="https://docs.google.com/forms/d/e/1FAIpQLSeRLMUR9dTkrJMrDi0x9oLUsYmXvnX2og
     Bringing Light To Every Corner Of Society
   </footer>
 
-
+<div id="imageModal" style="display: none;">
+  <span id="closeImage">&times;</span>
+  <img id="modalImage">
+</div>
   <!-- JavaScript -->
   <script>
     function showMessage() {
@@ -743,28 +738,24 @@ const galleryImages = document.querySelectorAll(".gallery-item img");
 
 const imageModal = document.getElementById("imageModal");
 const modalImage = document.getElementById("modalImage");
-const closeImage = document.querySelector(".close-image");
+const closeImage = document.getElementById("closeImage");
 
 galleryImages.forEach(function(image) {
   image.addEventListener("click", function() {
     modalImage.src = image.src;
-    imageModal.classList.add("show");
+    imageModal.style.display = "flex";
   });
 });
 
 closeImage.addEventListener("click", function() {
-  imageModal.classList.remove("show");
+  imageModal.style.display = "none";
 });
 
 imageModal.addEventListener("click", function(event) {
   if (event.target === imageModal) {
-    imageModal.classList.remove("show");
+    imageModal.style.display = "none";
   }
 });
 </script>
-<div id="imageModal" class="image-modal">
-  <span class="close-image">&times;</span>
-  <img id="modalImage" alt="Full Size Image">
-</div>
 </body>
   </html>
