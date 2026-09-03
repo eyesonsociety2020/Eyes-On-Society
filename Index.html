@@ -1,1 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Eyes On Society</title>
+
+  <link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+
+  <!-- Navigation -->
+
+  <nav>
+
+    <a href="#home">Home</a>
+
+    <a href="#team">Team</a>
+
+    <a href="#gallery">Gallery</a>
+
+    <a href="#news">News</a>
+
+    <a href="#about">About</a>
+
+    <a href="#contact">Contact</a>
+
+    <a href="#feedback">Feedback</a>
+
+  </nav>
+
+
+
+  <!-- Logo -->
+
+  <div class="logo-area">
+
+    <img
+      src="IMG-20260524-WA0000.jpg"
+      alt="Eyes On Society Logo"
+      class="logo"
+    >
+
+  </div>
+
+
+
+  <!-- Home -->
+
+  <section id="home" class="section home-section">
+
+    <h1>Eyes On Society</h1>
+
+    <p class="subtitle">
+      Bringing Light To Every Corner Of Society.
+    </p>
+
+    <button onclick="showMessage()">
+      Welcome
+    </button>
+
+  </section>
+
+
+
+  <!-- News -->
+
+  <section id="news" class="section">
+
+    <h2>Latest News & Posts</h2>
+
+    <div class="news-card">
+
+            <h3>২৩-৮-২০২৬ ইং 
+একজন মহিলাকে উনার অপারেশনের জন্য আর্থিক সহায়তা প্রদান করা হয়েছে। </h3>
+      <p>
+        আলহামদুলিল্লাহ ২৩-৮-২০২৬ ইং 
+একজন মহিলাকে উনার অপারেশনের জন্য আর্থিক সহায়তা প্রদান করা হয়েছে। 
+যাদের সহযোগিতায় আমাদের এই প্রজেক্ট সফলভাবে সম্পন হয়েছে তাদের প্রতি কৃতজ্ঞতা প্রকাশ করছি। এসময় উপস্তিত ছিলেন সংগঠের সকল সদ্যসবৃন্দ। 
+বিদ্র:আমরা যাদের সহযোগিতা করি তাদের সম্মান রক্ষার্তে তাদের কোন ছবি প্রকাশ করা হয় না।
+
+      <button onclick="showNews()">
+        Read More
+      </button>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- About -->
+
+  <section id="about" class="section">
+
+    <h2>About Us</h2>
+
+    <p>
+      Eyes On Society is a platform focused on society,
+      awareness and positive change.
+    </p>
+
+    <div class="visitor-box">
+
+      <h3>Website Visitors</h3>
+
+      <p id="visitorCount">0</p>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- Gallery -->
+
+  <section id="gallery" class="section">
+
+    <h2>Our Gallery</h2>
+
+    <p class="gallery-text">
+      Eyes On Society-এর বিভিন্ন কার্যক্রমের ছবি ও ভিডিও
+    </p>
+
+
+    <div class="gallery-grid">
+    <!-- ছবি ১ -->
+    <div class="gallery-item">
+      <img src="IMG-20260902-WA0002.jpg" alt="Gallery Photo 1">
+      <h3>আনছারুল আলম 
+           সভাপতি</h3>
+    </div>
+
+    <!-- ছবি ২ -->
+    <div class="gallery-item">
+      <img src="IMG-20260524-WA0000.jpg" alt="Gallery Photo 2">
+      <h3>EOS LOGO</h3>
+    </div>
+
+    <!-- ছবি ৩ -->
+    <div class="gallery-item">
+      <img src="FB_IMG_1788259159331.jpg" alt="Gallery Photo 3">
+      <h3>প্রজেক্ট</h3>
+    </div>
+
+    <!-- ছবি ৪ -->
+    <div class="gallery-item">
+      <img src="IMG-20260902-WA0011.jpg" alt="Gallery Photo 4">
+      <h3>অমিউজ্জামান এর স্বদেশ আগমন উপলক্ষে সংবর্ধনা প্রদান করা হয়</h3>
+    </div>
+
+    <!-- ছবি ৫ -->
+    <div class="gallery-item">
+      <img src="IMG-20260902-WA0008.jpg" alt="Gallery Photo 5">
+      <h3>হোসাইন আলম এর স্বদেশ আগমন উপলক্ষে সংবর্ধনা প্রদান করা হয়</h3>
+    </div>
+
+    <!-- ছবি ৬ -->
+    <div class="gallery-item">
+      <img src="IMG-20260902-WA0015.jpg" alt="Gallery Photo 6">
+      <h3>লোকমান আহমদ এর বিয়েতে সংবর্ধনা প্রদান করা হয়</h3>
+    </div>
+
+    <!-- ছবি ৭ -->
+    <div class="gallery-item">
+      <img src="IMG-20260902-WA0017.jpg" alt="Gallery Photo 7">
+      <h3>ইউসুফ ও ইউনুছ এর এর স্বদেশ আগমন উপলক্ষে সংবর্ধনা প্রদান করা হয়</h3>
+    </div>
+
+    <!-- ছবি ৮ -->
+    <div class="gallery-item">
+      <img src="photo8.jpg" alt="Gallery Photo 8">
+      <h3>photo</h3>
+    </div>
+
+    <!-- ছবি ৯ -->
+    <div class="gallery-item">
+      <img src="photo9.jpg" alt="Gallery Photo 9">
+      <h3>photo</h3>
+    </div>
+
+    <!-- ছবি ১০ -->
+    <div class="gallery-item">
+      <img src="photo10.jpg" alt="Gallery Photo 10">
+      <h3>photo</h3>
+      </div>
+
+
+    </div>
+
+
+
+    <!-- Video -->
+
+    <div class="video-box">
+
+      <h3>Our Video</h3>
+
+      <video controls>
+
+        <source src="video.mp4" type="video/mp4">
+
+        Your browser does not support video.
+
+      </video>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- Team -->
+
+  <section id="team" class="section">
+
+    <h2>Our Team</h2>
+
+
+    <div class="team-grid">
+
+
+     <div class="team-member">
+      <h3>আনছারুল আলম</h3>
+      <p>সভাপতি</p>
+    </div>
+
+    <div class="team-member">
+      <h3>মনসুর আহমেদ</h3>
+      <p>সহ-সভাপতি</p>
+    </div>
+
+    <div class="team-member">
+      <h3>তানভীর আহমেদ</h3>
+      <p>সহ-সভাপতি</p>
+    </div>
+
+    <div class="team-member">
+      <h3>সাবের হোসেন</h3>
+      <p>সাধারণ সম্পাদক</p>
+    </div>
+
+    <div class="team-member">
+      <h3>ইমতিয়াজ আহমেদ লিমন</h3>
+      <p>সহ-সাধারণ সম্পাদক</p>
+    </div>
+
+    <div class="team-member">
+      <h3>রুমন আহমেদ</h3>
+      <p>সহ-সাধারণ সম্পাদক</p>
+    </div>
+
+    <div class="team-member">
+      <h3>ইশরাক আহমেদ শিমন</h3>
+      <p>সাংগঠনিক সম্পাদক</p>
+    </div>
+
+    <div class="team-member">
+      <h3>আলী আকবর</h3>
+      <p>সহ-সাংগঠনিক সম্পাদক</p>
+    </div>
+
+    <div class="team-member">
+      <h3>আবু সাঈদ</h3>
+      <p>অর্থ সম্পাদক</p>
+    </div>
+
+    <div class="team-member">
+      <h3>ইমরুল আলম</h3>
+      <p>প্রচার সম্পাদক</p>
+    </div>
+
+    <div class="team-member">
+      <h3>হোসাইন আলম</h3>
+      <p>সহ-প্রচার সম্পাদক</p>
+    </div>
+
+    <div class="team-member">
+      <h3>রায়হান আহমেদ</h3>
+      <p>সমাজ কল্যাণ সম্পাদক</p>
+    </div>
+
+    <div class="team-member">
+      <h3>রাহাত আলম</h3>
+      <p>সদস্য</p>
+    </div>
+
+    <div class="team-member">
+    <h3>সাইফ আহমদ</h3>
+    <p>সদস্য</p>
+    </div>
+
+    <div class="team-member">
+    <h3>জামিল আহমদ</h3>
+    <p>সদস্য</p>
+    </div>
+
+    <div class="team-member">
+      <h3>মনসুর আহমেদ</h3>
+      <p>সদস্য</p>
+    </div>
+
+    <div class="team-member">
+      <h3>আলী আহমেদ</h3>
+      <p>সদস্য</p>
+    </div>
+
+    <div class="team-member">
+      <h3>হাসনাত আহমেদ</h3>
+      <p>সদস্য</p>
+    </div>
+
+    <div class="team-member">
+      <h3>অমিউজ্জামান</h3>
+      <p>সদস্য</p>
+    </div>
+
+    <div class="team-member">
+      <h3>ইউসুফ আল মুমিন</h3>
+      <p>সদস্য</p>
+    </div>
+
+    <div class="team-member">
+      <h3>ইউনুছ আল মুমিন</h3>
+      <p>সদস্য</p>
+    </div>
+
+    <div class="team-member">
+      <h3>ছাওয়ার আলম</h3>
+      <p>সদস্য</p>
+    </div>
+
+    <div class="team-member">
+    <h3>লোকমান আহমদ</h3>
+    <p>সদস্য</p>
+
+
+    </div>
+
+  </section>
+
+
+
+  <!-- Feedback -->
+
+  <section id="feedback" class="section">
+
+    <h2>Send Us Your Feedback</h2>
+
+    <p>
+      আপনার মূল্যবান মতামত আমাদের জন্য গুরুত্বপূর্ণ।
+    </p>
+
+
+    <a
+      class="feedback-button"
+      href="https://docs.google.com/forms/d/e/1FAIpQLSeRLMUR9dTkrJMrDi0x9oLUsYmXvnX2ogaZyiL-vCCbvTVKsw/viewform"
+      target="_blank"
+    >
+
+      Send Feedback
+
+    </a>
+
+  </section>
+
+
+
+  <!-- Contact -->
+
+  <section id="contact" class="section">
+
+    <h2>Contact</h2>
+
+    <p>
+      Stay connected with Eyes On Society.
+    </p>
+
+
+    <button onclick="contactMessage()">
+
+      Contact Us
+
+    </button>
+
+
+    <h3>Follow Us</h3>
+
+
+    <div class="social-buttons">
+
+      <a href="https://www.facebook.com/share/19Vw44ehXd/">Facebook</a>
+
+      <a href="https://youtube.com/@eyesonsociety-2020?si=UKgiBFO0mf0_yHY5">YouTube</a>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- Footer -->
+
+  <footer>
+
+    <p>
+      © 2026 Eyes On Society
+    </p>
+
+    <p>
+      Bringing Light To Every Corner Of Society
+    </p>
+
+  </footer>
+
+
+
+  <!-- Back To Top -->
+
+  <button id="backToTop">
+
+    ↑
+
+  </button>
+
+
+
+  <!-- Image Modal -->
+
+  <div id="imageModal">
+
+    <span id="closeImage">
+
+      &times;
+
+    </span>
+
+
+    <img
+      id="modalImage"
+      src=""
+      alt="Full Size Image"
+    >
+
+  </div>
+
+
+
+  <!-- JavaScript -->
+
+  <script src="script.js"></script>
+
+
+</body>
+
+  </html>
