@@ -388,41 +388,7 @@ nav a {
 .feedback-button:hover {
   transform: scale(1.05);
 }
-/* Image Click Zoom Modal */
-#imageModal {
-  display: none;
-  position: fixed;
-  inset: 0;
-  z-index: 999999;
-  background: rgba(0, 0, 0, 0.88);
-  justify-content: center;
-  align-items: center;
-  padding: 20px;
-  box-sizing: border-box;
-}
 
-#modalImage {
-  max-width: 90vw !important;
-  max-height: 85vh !important;
-  width: auto !important;
-  height: auto !important;
-  object-fit: contain !important;
-  display: block;
-  cursor: pointer;
-}
-
-/* Close button */
-#closeImage {
-  position: fixed;
-  top: 15px;
-  right: 20px;
-  z-index: 1000000;
-  color: white;
-  font-size: 42px;
-  font-weight: bold;
-  cursor: pointer;
-  line-height: 1;
-}
 </style>
 </head>
 
@@ -553,10 +519,7 @@ nav a {
       <h3>photo</h3>
     </div>
 </section>
-<div id="imageModal">
-  <span id="closeImage">&times;</span>
-  <img id="modalImage" src="">
-</div>
+
   
 </section>
 
@@ -702,9 +665,7 @@ href="https://docs.google.com/forms/d/e/1FAIpQLSeRLMUR9dTkrJMrDi0x9oLUsYmXvnX2og
 </section>
   </div>
 
-</section>
     </section>
-
 
     <!-- Contact Section -->
     <section id="contact"class="animate">
@@ -759,51 +720,7 @@ const animatedElements = document.querySelectorAll(".animate");
 </script>
 
 <script>
-const galleryImages = document.querySelectorAll(".gallery-item img");
 
-const imageModal = document.getElementById("imageModal");
-const modalImage = document.getElementById("modalImage");
-const closeImage = document.getElementById("closeImage");
-
-/* Gallery photo click = বড় */
-galleryImages.forEach(function(image) {
-
-  image.addEventListener("click", function() {
-
-    modalImage.src = image.src;
-    imageModal.style.display = "flex";
-
-  });
-
-});
-
-
-/* বড় photo click = বন্ধ */
-modalImage.addEventListener("click", function() {
-
-  imageModal.style.display = "none";
-
-});
-
-
-/* × click = বন্ধ */
-closeImage.addEventListener("click", function() {
-
-  imageModal.style.display = "none";
-
-});
-
-
-/* কালো background click = বন্ধ */
-imageModal.addEventListener("click", function(event) {
-
-  if (event.target === imageModal) {
-
-    imageModal.style.display = "none";
-
-  }
-
-});
 </script>
 </body>
   </html>
