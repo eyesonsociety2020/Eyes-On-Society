@@ -92,9 +92,6 @@ nav a:hover {
   object-fit: contain;
 
   display: block;
-  margin: 0 auto 25px;
-  border-radius: 50%;
-  mix-blend-mode: multiply;
 
   animation: logoZoom 2s ease-out forwards;
 }
@@ -205,7 +202,9 @@ button:hover {
 
 
 
-/* ===== NEWS READ MORE ===== */
+/* =========================
+   NEWS WITH IMAGE
+========================= */
 
 .more-news {
   display: none;
@@ -214,13 +213,15 @@ button:hover {
 
 .news-card {
   margin: 15px 0;
-  padding: 20px;
+  padding: 15px;
 
   background: #f7f7f7;
 
-  border-radius: 12px;
+  border-radius: 15px;
 
   text-align: left;
+
+  overflow: hidden;
 
   transition: 0.3s;
 }
@@ -233,9 +234,45 @@ button:hover {
 }
 
 
+/* News Image */
+
+.news-image {
+  width: 100%;
+
+  height: 220px;
+
+  object-fit: cover;
+
+  border-radius: 10px;
+
+  display: block;
+
+  margin-bottom: 12px;
+
+  cursor: pointer;
+}
+
+
+.news-card h3 {
+  margin: 5px 0 10px;
+
+  font-size: 19px;
+
+  line-height: 1.5;
+}
+
+
+.news-card p {
+  margin: 0;
+
+  line-height: 1.6;
+}
+
+
 #readMoreBtn {
   margin-top: 15px;
 }
+
 
 
 
@@ -628,4 +665,80 @@ footer p {
     height: 130px;
   }
 
+}
+
+
+/* Mobile Menu */
+#menuButton {
+  display: none;
+  background: black#0b3d2e;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  font-size: 22px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+#navLinks {
+  display: block;
+}
+
+@media (max-width: 768px) {
+
+  nav {
+    text-align: center;
+  }
+
+  #menuButton {
+    display: block;
+    margin-left: auto;
+    margin-right: 10px;
+  }
+
+  #navLinks {
+    display: none;
+    text-align: center;
+    padding-top: 10px;
+  }
+
+  #navLinks.show {
+    display: block;
+  }
+
+  #navLinks a {
+    display: block;
+    padding: 10px;
+    margin: 0;
+  }
+}
+
+
+
+/* Our Impact */
+#impact {
+  text-align: center;
+}
+
+.impact-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.impact-box {
+  background: #f7f7f7;
+  padding: 20px;
+  border-radius: 15px;
+}
+
+.impact-box h3 {
+  font-size: 30px;
+  margin: 0 0 8px;
+}
+
+.impact-box p {
+  margin: 0;
+  font-size: 15px;
 }
