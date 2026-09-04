@@ -163,3 +163,46 @@ modalImage.addEventListener(
 
   }
 );
+
+
+
+/* =========================
+   NEWS READ MORE
+========================= */
+
+const readMoreBtn =
+  document.getElementById("readMoreBtn");
+
+
+const moreNews =
+  document.getElementById("moreNews");
+
+
+readMoreBtn.addEventListener(
+  "click",
+  function () {
+
+    if (
+      moreNews.style.display === "block"
+    ) {
+
+      moreNews.style.display =
+        "none";
+
+
+      readMoreBtn.innerText =
+        "Read More";
+
+    } else {
+
+      moreNews.style.display =
+        "block";
+
+
+      readMoreBtn.innerText =
+        "Show Less";
+
+    }
+
+  }
+);
