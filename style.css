@@ -92,7 +92,9 @@ nav a:hover {
   object-fit: contain;
 
   display: block;
-
+  margin: o auto 25px;
+  border-radius: 50%;
+  mix-blend-mode: multiply;
   animation: logoZoom 2s ease-out forwards;
 }
 
