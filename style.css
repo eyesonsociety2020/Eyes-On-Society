@@ -205,24 +205,39 @@ button:hover {
 
 
 
-/* =========================
-   NEWS
-========================= */
+/* ===== NEWS READ MORE ===== */
+
+.more-news {
+  display: none;
+}
+
 
 .news-card {
+  margin: 15px 0;
   padding: 20px;
 
   background: #f7f7f7;
 
   border-radius: 12px;
+
+  text-align: left;
+
+  transition: 0.3s;
 }
 
 
-.news-card h3 {
-  font-size: 17px;
+.news-card:hover {
+  transform: translateY(-3px);
 
-  line-height: 1.5;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
+
+
+#readMoreBtn {
+  margin-top: 15px;
+}
+
+
 
 /* =========================
    GALLERY
