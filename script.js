@@ -165,7 +165,6 @@ modalImage.addEventListener(
 );
 
 
-
 /* =========================
    NEWS READ MORE
 ========================= */
@@ -206,3 +205,22 @@ readMoreBtn.addEventListener(
 
   }
 );
+
+
+
+// Mobile Menu
+const menuButton = document.getElementById("menuButton");
+const navLinks = document.getElementById("navLinks");
+
+menuButton.addEventListener("click", function () {
+  navLinks.classList.toggle("show");
+});
+
+// Menu link-এ touch করলে automatically close হবে
+const menuItems = navLinks.querySelectorAll("a");
+
+menuItems.forEach(function (item) {
+  item.addEventListener("click", function () {
+    navLinks.classList.remove("show");
+  });
+});
