@@ -235,7 +235,7 @@ donorBtn.addEventListener("click", function () {
 
   if (donorList.style.display === "none") {
     donorList.style.display = "block";
-    donorBtn.textContent = "Hide Donors / দাতাদের লুকান";
+    donorBtn.textContent = "OUR DONOR / আমাদের দাতা সদস্যবৃন্দ";
   } else {
     donorList.style.display = "none";
     donorBtn.textContent = "OUR DONOR / আমাদের দাতা সদস্যবৃন্দ";
