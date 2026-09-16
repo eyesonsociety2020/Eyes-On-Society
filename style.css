@@ -744,3 +744,46 @@ footer p {
   margin: 0;
   font-size: 15px;
 }
+
+
+
+/* Our Donors */
+
+#donors {
+  text-align: center;
+  padding: 20px 10px;
+}
+
+#donorBtn {
+  padding: 12px 22px;
+  border: none;
+  border-radius: 8px;
+  background: #0b3d2e;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+#donorList {
+  margin-top: 20px;
+}
+
+.donor-box {
+  background: #f7f7f7;
+  padding: 12px;
+  margin: 8px auto;
+  max-width: 500px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.donor-box h3 {
+  margin: 0 0 5px;
+  font-size: 16px;
+}
+
+.donor-box p {
+  margin: 0;
+  font-size: 14px;
+}
