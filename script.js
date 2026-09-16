@@ -224,3 +224,21 @@ menuItems.forEach(function (item) {
     navLinks.classList.remove("show");
   });
 });
+
+
+// Our Donors
+
+const donorBtn = document.getElementById("donorBtn");
+const donorList = document.getElementById("donorList");
+
+donorBtn.addEventListener("click", function () {
+
+  if (donorList.style.display === "none") {
+    donorList.style.display = "block";
+    donorBtn.textContent = "Hide Donors / দাতাদের লুকান";
+  } else {
+    donorList.style.display = "none";
+    donorBtn.textContent = "OUR DONOR / আমাদের দাতা সদস্যবৃন্দ";
+  }
+
+});
