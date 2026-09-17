@@ -1,101 +1,244 @@
-// Mobile hamburger menu
+function showMessage() {
+
+  alert("Welcome to Eyes On Society! 🎉");
+
+}
+
+
+
+function showNews() {
+
+  alert(
+    "Eyes On Society সমাজের মানুষের পাশে থাকার জন্য বিভিন্ন কার্যক্রম পরিচালনা করে।"
+  );
+
+}
+
+
+
+function contactMessage() {
+
+  alert(
+    "Thank you for contacting Eyes On Society!"
+  );
+
+}
+
+
+/* =========================
+   BACK TO TOP
+========================= */
+
+const backToTop = document.getElementById(
+  "backToTop"
+);
+
+
+window.addEventListener(
+  "scroll",
+  function () {
+
+    if (window.scrollY > 300) {
+
+      backToTop.style.display = "block";
+
+    } else {
+
+      backToTop.style.display = "none";
+
+    }
+
+  }
+);
+
+
+
+backToTop.addEventListener(
+  "click",
+  function () {
+
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
+
+  }
+);
+
+
+
+/* =========================
+   GALLERY IMAGE MODAL
+========================= */
+
+const galleryImages =
+  document.querySelectorAll(
+    ".gallery-item img"
+  );
+
+
+const imageModal =
+  document.getElementById(
+    "imageModal"
+  );
+
+
+const modalImage =
+  document.getElementById(
+    "modalImage"
+  );
+
+
+const closeImage =
+  document.getElementById(
+    "closeImage"
+  );
+
+
+
+galleryImages.forEach(
+  function (image) {
+
+    image.addEventListener(
+      "click",
+      function () {
+
+        modalImage.src =
+          image.src;
+
+
+        imageModal.style.display =
+          "flex";
+
+      }
+    );
+
+  }
+);
+
+
+
+/* Close button */
+
+closeImage.addEventListener(
+  "click",
+  function () {
+
+    imageModal.style.display =
+      "none";
+
+  }
+);
+
+
+
+/* Click background to close */
+
+imageModal.addEventListener(
+  "click",
+  function (event) {
+
+    if (
+      event.target === imageModal
+    ) {
+
+      imageModal.style.display =
+        "none";
+
+    }
+
+  }
+);
+
+
+
+/* Click image again to close */
+
+modalImage.addEventListener(
+  "click",
+  function () {
+
+    imageModal.style.display =
+      "none";
+
+  }
+);
+
+
+/* =========================
+   NEWS READ MORE
+========================= */
+
+const readMoreBtn =
+  document.getElementById("readMoreBtn");
+
+
+const moreNews =
+  document.getElementById("moreNews");
+
+
+readMoreBtn.addEventListener(
+  "click",
+  function () {
+
+    if (
+      moreNews.style.display === "block"
+    ) {
+
+      moreNews.style.display =
+        "none";
+
+
+      readMoreBtn.innerText =
+        "Read More";
+
+    } else {
+
+      moreNews.style.display =
+        "block";
+
+
+      readMoreBtn.innerText =
+        "Show Less";
+
+    }
+
+  }
+);
+
+
+
+// Mobile Menu
 const menuButton = document.getElementById("menuButton");
 const navLinks = document.getElementById("navLinks");
 
-menuButton.addEventListener("click", () => {
-  const isOpen = navLinks.classList.toggle("show");
-  menuButton.setAttribute("aria-expanded", String(isOpen));
-  menuButton.setAttribute("aria-label", isOpen ? "Close menu" : "Open menu");
-  document.body.classList.toggle("menu-open", isOpen);
+menuButton.addEventListener("click", function () {
+  navLinks.classList.toggle("show");
 });
 
-navLinks.querySelectorAll("a").forEach(link => {
-  link.addEventListener("click", () => {
+// Menu link-এ touch করলে automatically close হবে
+const menuItems = navLinks.querySelectorAll("a");
+
+menuItems.forEach(function (item) {
+  item.addEventListener("click", function () {
     navLinks.classList.remove("show");
-    menuButton.setAttribute("aria-expanded", "false");
-    menuButton.setAttribute("aria-label", "Open menu");
-    document.body.classList.remove("menu-open");
   });
 });
 
-// Donor list
+
+// Our Donors
+
 const donorBtn = document.getElementById("donorBtn");
 const donorList = document.getElementById("donorList");
 
-donorBtn.addEventListener("click", () => {
-  const willOpen = donorList.hidden;
-  donorList.hidden = !willOpen;
-  donorBtn.textContent = willOpen
-    ? "দাতা সদস্যদের তালিকা লুকান"
-    : "দাতা সদস্যদের তালিকা দেখুন";
-  donorBtn.setAttribute("aria-expanded", String(willOpen));
-});
+donorBtn.addEventListener("click", function () {
 
-// Back to top
-const backToTop = document.getElementById("backToTop");
-
-window.addEventListener("scroll", () => {
-  backToTop.style.display = window.scrollY > 450 ? "grid" : "none";
-});
-
-backToTop.addEventListener("click", () => {
-  window.scrollTo({ top: 0, behavior: "smooth" });
-});
-
-// Gallery modal
-const imageModal = document.getElementById("imageModal");
-const modalImage = document.getElementById("modalImage");
-const modalCaption = document.getElementById("modalCaption");
-const closeImage = document.getElementById("closeImage");
-
-document.querySelectorAll(".gallery-item").forEach(item => {
-  item.addEventListener("click", () => {
-    modalImage.src = item.dataset.image;
-    modalImage.alt = item.dataset.title || "Gallery image";
-    modalCaption.textContent = item.dataset.title || "";
-    imageModal.classList.add("show");
-    imageModal.setAttribute("aria-hidden", "false");
-    document.body.classList.add("modal-open");
-  });
-});
-
-function closeModal() {
-  imageModal.classList.remove("show");
-  imageModal.setAttribute("aria-hidden", "true");
-  modalImage.src = "";
-  document.body.classList.remove("modal-open");
-}
-
-closeImage.addEventListener("click", closeModal);
-
-imageModal.addEventListener("click", event => {
-  if (event.target === imageModal) closeModal();
-});
-
-document.addEventListener("keydown", event => {
-  if (event.key === "Escape") {
-    closeModal();
-    navLinks.classList.remove("show");
-    menuButton.setAttribute("aria-expanded", "false");
-    document.body.classList.remove("menu-open");
+  if (donorList.style.display === "none") {
+    donorList.style.display = "block";
+    donorBtn.textContent = "OUR DONOR / আমাদের দাতা সদস্যবৃন্দ";
+  } else {
+    donorList.style.display = "none";
+    donorBtn.textContent = "OUR DONOR / আমাদের দাতা সদস্যবৃন্দ";
   }
+
 });
-
-// Active navigation link
-const sections = document.querySelectorAll("main section[id]");
-const navAnchors = document.querySelectorAll(".nav-links a");
-
-const observer = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      navAnchors.forEach(anchor => {
-        anchor.classList.toggle(
-          "active",
-          anchor.getAttribute("href") === `#${entry.target.id}`
-        );
-      });
-    }
-  });
-}, { rootMargin: "-35% 0px -55% 0px" });
-
-sections.forEach(section => observer.observe(section));
